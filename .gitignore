@@ -200,3 +200,5 @@ README.html
 .idea
 .exercism
 .vim/
+notes.md
+src/main/resources
