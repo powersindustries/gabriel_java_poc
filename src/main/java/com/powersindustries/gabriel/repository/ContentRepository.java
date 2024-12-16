@@ -1,7 +1,6 @@
 package com.powersindustries.gabriel.repository;
 
 import com.powersindustries.gabriel.model.Content;
-import com.powersindustries.gabriel.model.User;
 import com.powersindustries.gabriel.util.FileReadingHelper;
 import org.springframework.stereotype.Repository;
 

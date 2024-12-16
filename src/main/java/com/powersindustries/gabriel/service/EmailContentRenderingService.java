@@ -1,11 +1,8 @@
 package com.powersindustries.gabriel.service;
 
 import com.powersindustries.gabriel.model.Content;
-import com.powersindustries.gabriel.model.User;
 import com.powersindustries.gabriel.repository.ContentRepository;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class EmailContentRenderingService {

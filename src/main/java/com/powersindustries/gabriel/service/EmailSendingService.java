@@ -1,6 +1,5 @@
 package com.powersindustries.gabriel.service;
 
-import com.powersindustries.gabriel.repository.UserRepository;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;

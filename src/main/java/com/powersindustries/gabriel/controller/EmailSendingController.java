@@ -1,7 +1,6 @@
 package com.powersindustries.gabriel.controller;
 
 import com.powersindustries.gabriel.model.User;
-import com.powersindustries.gabriel.repository.ContentRepository;
 import com.powersindustries.gabriel.service.EmailContentRenderingService;
 import com.powersindustries.gabriel.service.EmailSendingService;
 import com.powersindustries.gabriel.service.UserService;
