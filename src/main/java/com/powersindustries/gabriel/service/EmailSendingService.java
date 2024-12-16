@@ -1,5 +1,6 @@
 package com.powersindustries.gabriel.service;
 
+import com.powersindustries.gabriel.repository.UserRepository;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,12 @@ public class EmailSendingService {
     @Autowired
     private JavaMailSender mailSender;
 
+    private final EmailContentRenderingService emailContentRenderingService;
+
+    public EmailSendingService(EmailContentRenderingService emailContentRenderingService) {
+        this.emailContentRenderingService = emailContentRenderingService;
+    }
+
     public void sendtTextEmail(String to, String subject, String body) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(to);
@@ -24,7 +31,6 @@ public class EmailSendingService {
     }
 
     public void sendtHTMLEmail(String to, String subject, String html) throws MessagingException {
-
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper messageHelper = new MimeMessageHelper(message, true);
 
