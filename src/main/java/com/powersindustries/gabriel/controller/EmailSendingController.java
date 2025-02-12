@@ -21,14 +21,16 @@ public class EmailSendingController {
         this.userService = userService;
         this.emailContentRenderingService = emailContentRenderingService;
 
-        // ToDo: This block is for POC. Move to endpoint.
+        // ToDo: This block is for POC. Moving to endpoint in the future.
         List<User> userList = this.userService.getAllUsers();
         for (User user : userList) {
             this.emailSendingService.sendtTextEmail(user.getEmail(), "Test", "Test message.");
 
-            String html = this.emailContentRenderingService.getBodyTest().getHtml();
+            String html = this.emailContentRenderingService.getBodyTestHTML().getHtml();
             this.emailSendingService.sendtHTMLEmail(user.getEmail(), "Test html", html);
 
+            String markdown = this.emailContentRenderingService.getBodyTestMarkdown().getHtml();
+            this.emailSendingService.sendtHTMLEmail(user.getEmail(), "Test Markdown", markdown);
         }
     }
 }

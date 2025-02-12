@@ -14,8 +14,13 @@ public class EmailContentRenderingService {
     }
 
     // ToDo: Replace with actual call to content database.
-    public Content getBodyTest() {
-        return contentRepository.getTestBody();
+    public Content getBodyTestHTML() {
+        return contentRepository.getTestHTMLBody();
+    }
+
+    // ToDo: Replace with actual call to content database.
+    public Content getBodyTestMarkdown() {
+        return contentRepository.getTestMarkdownToHTMLBody();
     }
 
 

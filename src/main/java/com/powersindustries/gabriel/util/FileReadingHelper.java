@@ -20,7 +20,7 @@ public class FileReadingHelper {
 
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(getClass().getClassLoader().getResourceAsStream(fileName),
-                        StandardCharsets.UTF_8))) {
+                StandardCharsets.UTF_8))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 lines.add(line);
